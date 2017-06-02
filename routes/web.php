@@ -413,3 +413,7 @@ Route::get('/login/{success}', function ($success) {
     $success = "Successfully registered organization! Please wait for confirmation from the admin";
     return view('auth.login',compact('success'));
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
